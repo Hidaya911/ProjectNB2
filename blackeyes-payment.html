@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlackEyes Printing Services — Secure Checkout</title>
+<script src="des.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <!-- font awesome link for icons -->
+     <link
+      rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="color-start"></div>
+
+<header class="site-header navbar navbar-expand-lg bg-white shadow-sm py-3">
+  <div class="container-fluid px-4">
+    
+    <a class="navbar-brand me-auto" href="#">
+      <img src="imgs/logo nobg.png" alt="BlackEyes Printing Services Logo" style="height: 40px; object-fit: contain;">
+    </a>
+
+    <div class="secure-checkout-wrap d-flex align-items-center gap-2 ms-auto">
+      <i class="fa-solid fa-bag-shopping checkout-icon"></i>
+      <span class="fw-semibold text-secondary  small text-nowrap">Secure Checkout</span>
+    </div>
+
+  </div>
+</header>
+
+<!-- PROGRESS -->
+<div class="container my-4">
+  
+  <div class="progress-steps-wrapper d-flex flex-column flex-md-row justify-content-between align-items-center position-relative gap-4 gap-md-0">
+    
+    <!-- Step 1 -->
+    <!--  'justify-content-center'  the circle and text center together on mobile -->
+    <div class="step-item d-flex flex-row flex-md-column align-items-center justify-content-center text-center active" id="step1-ind">
+      <div class="step-dot">1</div>
+      <!--   'mx-2 mx-md-0' to keep margins balanced when centered -->
+      <span class="fw-semibold small mx-2 mx-md-0 mt-0 mt-md-2 text-nowrap d-inline-block">Personal</span>
+    </div>
+    
+    <!-- Connector Line 1 (Hidden on mobile) -->
+    <div class="step-line d-none d-md-block flex-grow-1" id="line1"></div>
+    
+    <!-- Step 2 -->
+    <div class="step-item d-flex flex-row flex-md-column align-items-center justify-content-center text-center" id="step2-ind">
+      <div class="step-dot">2</div>
+      <span class="fw-semibold text-muted small mx-2 mx-md-0 mt-0 mt-md-2 text-nowrap d-inline-block">Address</span>
+    </div>
+    
+    <!-- Connector Line 2 (Hidden on mobile) -->
+    <div class="step-line d-none d-md-block flex-grow-1" id="line2"></div>
+    
+    <!-- Step 3 -->
+    <div class="step-item d-flex flex-row flex-md-column align-items-center justify-content-center text-center" id="step3-ind">
+      <div class="step-dot">3</div>
+      <span class="fw-semibold text-muted small mx-2 mx-md-0 mt-0 mt-md-2 text-nowrap d-inline-block">Payment</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- MAIN -->
+
+<div class="checkout-wrapper container my-5">
+  
+<div class="row flex-column-reverse flex-lg-row-reverse g-4">
+
+    <div class="col-12 col-lg-4">
+      <div class="card summary-card  p-4 h-100">
+        <!-- order summary -->
+        <h2 class="card-title h4 fw-bold text-dark d-flex align-items-center gap-2 mt-4 mb-3">
+          <span class="dot dot-cyan bg-info d-inline-block rounded-circle" style="width: 10px; height: 10px;"></span>
+          Order Summary
+        </h2>
+        
+        <div class="order-items d-flex flex-column gap-3 mb-4">
+          <div class="order-item d-flex justify-content-between align-items-start pb-3 border-bottom border-light">
+            <div>
+              <div class="item-name fw-semibold text-dark">Business Cards (Premium Matte)</div>
+              <div class="item-qty small text-muted">500 pcs · Double-sided</div>
+            </div>
+            <div class="item-price fw-bold text-dark">9.00</div>
+          </div>
+          <div class="order-item d-flex justify-content-between align-items-start pb-3 border-bottom border-light">
+            <div>
+              <div class="item-name fw-semibold text-dark">A3 Flyers (Glossy)</div>
+              <div class="item-qty small text-muted">1000 pcs · Full colour</div>
+            </div>
+            <div class="item-price fw-bold text-dark">20.00</div>
+          </div>
+          
+        </div>
+        
+        <div class="summary-totals bg-light p-3 rounded-3 mb-4">
+          <div class="total-row d-flex justify-content-between mb-2 small text-secondary">
+            <span>Subtotal</span><span>29.00</span>
+          </div>
+          <div class="total-row d-flex justify-content-between mb-2 small text-secondary">
+            <span>Shipping</span><span class="text-success fw-semibold">Free</span>
+          </div>
+       
+          <div class="total-row grand d-flex justify-content-between align-items-center pt-2 border-top border-secondary-subtle">
+            <span class="fw-bold h5 mb-0">Total</span><span class="fw-bold h4 text-dark mb-0">29$</span>
+          </div>
+        </div>
+
+         
+      </div>
+    </div>
+
+
+
+    <!-- first container -->
+    <div class="col-12 col-lg-8">
+      <div class="card  p-4 p-md-5" id="form-card">
+
+        <div class="form-section active" id="section-1">
+          <h2 class="card-title h4 fw-bold text-dark d-flex align-items-center gap-2 mb-4">
+            <span class="dot dot-cyan bg-info d-inline-block rounded-circle" style="width: 10px; height: 10px;"></span>
+            Personal Information
+          </h2>
+          <div class="row g-3">
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Joe" autocomplete="given-name">
+              <div class="form-text text-danger small mt-1" id="err-firstName"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Assad" autocomplete="family-name">
+              <div class="form-text text-danger small mt-1" id="err-lastName"></div>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold text-secondary">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="joe@example.com" autocomplete="email">
+              <div class="form-text text-danger small mt-1" id="err-email"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+961 3 123 456" autocomplete="tel">
+              <div class="form-text text-danger small mt-1" id="err-phone"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">Company (Optional)</label>
+              <input type="text" class="form-control" id="company" placeholder="Your Company" autocomplete="organization">
+              <div class="form-text text-danger small mt-1"></div>
+            </div>
+          </div>
+          <div class="btn-row d-flex justify-content-center mt-4 pt-2">
+            <button class="btn btn-info text-white fw-semibold px-4 py-2 rounded-pill w-60   w-sm-auto d-inline-flex align-items-center justify-content-center gap-2" onclick="goToStep(2)">
+              Continue to Address
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+            <!-- GO TO ADDRESS -->
+        <div class="form-section d-none" id="section-2">
+          <h2 class="card-title h4 fw-bold text-dark d-flex align-items-center gap-2 mb-4">
+            <span class="dot dot-magenta bg-danger d-inline-block rounded-circle" style="width: 10px; height: 10px;"></span>
+            Billing Address
+          </h2>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label small fw-semibold text-secondary">Street Address</label>
+              <input type="text" class="form-control" id="billingStreet" placeholder="123 Hamra Street" autocomplete="billing street-address">
+              <div class="form-text text-danger small mt-1" id="err-billingStreet"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">City</label>
+              <input type="text" class="form-control" id="billingCity" placeholder="Beirut" autocomplete="billing address-level2">
+              <div class="form-text text-danger small mt-1" id="err-billingCity"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">State / Region</label>
+              <input type="text" class="form-control" id="billingState" placeholder="Beirut Governorate" autocomplete="billing address-level1">
+              <div class="form-text text-danger small mt-1" id="err-billingState"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">ZIP / Postal Code</label>
+              <input type="text" class="form-control" id="billingZip" placeholder="1107 2020" autocomplete="billing postal-code">
+              <div class="form-text text-danger small mt-1" id="err-billingZip"></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="form-label small fw-semibold text-secondary">Country</label>
+              <select class="form-select" id="billingCountry" autocomplete="billing country">
+                <option value="">Select country</option>
+                <option value="LB" selected>Lebanon</option>
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+              </select>
+              <div class="form-text text-danger small mt-1" id="err-billingCountry"></div>
+            </div>
+          </div>
+
+   
+
+          <div class="btn-row d-flex flex-column flex-sm-row justify-content-between mt-4 pt-2 gap-2">
+            <button class="btn btn-outline-secondary px-4 py-2 rounded-pill d-inline-flex align-items-center justify-content-center gap-2" onclick="goToStep(1)">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Back
+            </button>
+            <button class="btn btn-info text-white fw-semibold px-4 py-2 rounded-pill d-inline-flex align-items-center justify-content-center gap-2" onclick="goToStep(3)">
+              Continue to Payment
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- PAYMENT SECTION -->
+        <div class="form-section d-none" id="section-3">
+          <h2 class="card-title h4 fw-bold text-dark d-flex align-items-center gap-2 mb-4">
+            <span class="dot dot-yellow bg-warning d-inline-block rounded-circle" style="width: 10px; height: 10px;"></span>
+            Payment Details
+          </h2>
+<!-- edit bg of the card with the colors -->
+
+          <div class="card-preview bg-dark text-white p-4 rounded-3 shadow mb-4 mx-auto" style="max-width: 350px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+       <!-- caard chip preview yellow rectangle -->
+            <div class="card-chip bg-warning rounded-2 mb-3" style="width: 40px; height: 28px; opacity: 0.8;"></div>
+          
+            <div class="card-number-display h5 tracking-widest font-monospace py-2" id="previewNumber">•••• •••• •••• ••••</div>
+           <!-- space between ur name and the dots ... -->
+            <div class="card-bottom d-flex justify-content-between align-items-end mt-3">
+              <div>
+            <!-- undisplayed text above the name -->
+                <div class="card-label text-muted small text-uppercase" style="font-size: 10px;">Name</div>
+                <div class="card-value small font-monospace" id="previewName">Your Name</div>
+              </div>
+              <div>
+                <div class="card-label text-muted small text-uppercase" style="font-size: 10px;">Expires</div>
+                <div class="card-value small font-monospace" id="previewExpiry">MM / YY</div>
+              </div>
+
+          <!-- yellow circle  -->
+              <div class="card-network d-flex gap-1">
+
+                <div class="net-circle net-c1 rounded-circle bg-danger" style="width: 20px; height: 20px; opacity:0.8;"></div>
+                <div class="net-circle net-c2 rounded-circle bg-warning" style="width: 20px; height: 20px; margin-left: -10px; opacity:0.8;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label small fw-semibold text-secondary">Name on Card</label>
+              <input type="text" class="form-control" id="cardName" placeholder="Joe Assad"  >
+              <!-- handle error directly from bootstrap  -->
+              <div class="form-text text-danger small mt-1" id="err-cardName"></div>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold text-secondary">Card Number</label>
+              <input type="text" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000"   maxlength="19" autocomplete="cc-number" oninput="formatCardNumber(this)" >
+              <div class="form-text text-danger small mt-1" id="err-cardNumber"></div>
+            </div>
+            <div class="col-6">
+              <label class="form-label small fw-semibold text-secondary">Expiry Date</label>
+              <input type="text" class="form-control" id="cardExpiry" placeholder="MM / YY"  maxlength="7"   autocomplete="cc-exp" oninput="formatExpiry(this)" >
+              <div class="form-text text-danger small mt-1" id="err-cardExpiry"></div>
+            </div>
+            <div class="col-6">
+              <label class="form-label small fw-semibold text-secondary">CVV / CVC</label>
+              <input type="text" class="form-control" id="cardCvv" placeholder="•••"   maxlength="4"  autocomplete="cc-csc" oninput="formatCvv(this)" >
+              <div class="form-text text-danger small mt-1" id="err-cardCvv"></div>
+            </div>
+          </div>
+<!-- failed case -->
+          <div class="alert alert-danger d-flex align-items-center gap-2 mt-4 d-none" role="alert" id="paymentError">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            <span id="paymentErrorMsg" class="small">Payment failed. Please check your card details and try again.</span>
+          </div>
+
+          <div class="btn-row d-flex flex-column flex-sm-row justify-content-between mt-4 pt-2 gap-2">
+            <button class="btn btn-outline-secondary px-4 py-2 rounded-pill d-inline-flex align-items-center justify-content-center gap-2" onclick="goToStep(2)">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Back
+            </button>
+            <button class="btn btn-success text-white fw-semibold px-5 py-2 rounded-pill d-inline-flex align-items-center justify-content-center gap-2" id="payBtn" onclick="submitPayment()">
+              <div class="spinner-border spinner-border-sm text-light d-none" role="status" id="paymentSpinner"></div>
+              <span class="btn-text d-inline-flex align-items-center gap-2">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Pay 29.00
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- success case -->
+
+        <div class="success-screen d-none text-center py-4" id="success-screen">
+          <div class="success-icon bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 72px; height: 72px;">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h2 class="success-title fw-bold text-dark h3">Order Confirmed!</h2>
+          <p class="success-sub text-secondary px-md-4 mt-2">Thank you for your order. <br> BlackEyes Printing Services will process your job and you'll receive a confirmation shortly.</p>
+          <div class="order-ref bg-light border text-primary fw-bold font-monospace py-2 px-4 rounded d-inline-block mt-3" id="orderRef">ORDER #BEP-000000</div>
+          <div class="text-muted small mt-4 pt-2">A receipt has been sent to your email address.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
